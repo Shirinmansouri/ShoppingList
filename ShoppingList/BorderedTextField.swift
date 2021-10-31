@@ -16,7 +16,7 @@ class BorderedTextField: UITextField {
     {
         self.insets = insets
         super.init(frame:.zero)
-        layer.cornerRadius = 8
+        layer.cornerRadius = 4
         layer.borderWidth = 1.5
         layer.borderColor = UIColor.systemRed.cgColor
         

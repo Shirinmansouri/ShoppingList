@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Second Design View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SecondDesignViewController" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="41Z-Li-XRt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,8 +191,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zxe-KM-Qwp">
-                                <rect key="frame" x="20" y="721" width="368" height="70"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="A2Y-TL-M4Y">
+                                <rect key="frame" x="300" y="308" width="96" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="0H8-9I-H0e"/>
+                                    <constraint firstAttribute="width" constant="92" id="uPI-Re-YA2"/>
+                                </constraints>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KTf-PN-4p8">
+                                <rect key="frame" x="296" y="372" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="kaB-Qf-evr">
+                                <rect key="frame" x="296" y="443" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="96w-Fd-YiB">
+                                <rect key="frame" x="296" y="507" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="trG-vQ-yAj">
+                                <rect key="frame" x="298" y="567" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zxe-KM-Qwp">
+                                <rect key="frame" x="20" y="679" width="368" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qh-uC-zDO" customClass="RoundButton" customModule="ShoppingList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="174" height="70"/>
@@ -235,17 +258,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="A2Y-TL-M4Y">
-                                <rect key="frame" x="300" y="308" width="96" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="0H8-9I-H0e"/>
-                                    <constraint firstAttribute="width" constant="92" id="uPI-Re-YA2"/>
-                                </constraints>
-                            </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KTf-PN-4p8">
-                                <rect key="frame" x="296" y="372" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YiS-5F-hcY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -253,7 +265,6 @@
                             <constraint firstItem="A2Y-TL-M4Y" firstAttribute="leading" secondItem="xBs-yQ-3O3" secondAttribute="trailing" constant="10" id="06n-e6-VkH"/>
                             <constraint firstItem="xBs-yQ-3O3" firstAttribute="leading" secondItem="ULC-0e-VNw" secondAttribute="trailing" constant="8" symbolic="YES" id="07M-1N-hX0"/>
                             <constraint firstItem="YiS-5F-hcY" firstAttribute="trailing" secondItem="A2Y-TL-M4Y" secondAttribute="trailing" constant="20" id="2GU-dl-csj"/>
-                            <constraint firstItem="Zxe-KM-Qwp" firstAttribute="top" secondItem="A2Y-TL-M4Y" secondAttribute="bottom" constant="384" id="2vC-uP-c8g"/>
                             <constraint firstItem="zO2-vk-wvj" firstAttribute="leading" secondItem="2AQ-Re-2yY" secondAttribute="trailing" constant="8" symbolic="YES" id="6Ph-9A-Ikj"/>
                             <constraint firstItem="2AQ-Re-2yY" firstAttribute="top" secondItem="ULC-0e-VNw" secondAttribute="bottom" constant="34" id="6cW-pj-6ta"/>
                             <constraint firstItem="6y9-Xt-HF5" firstAttribute="top" secondItem="QnK-Bf-1oU" secondAttribute="bottom" constant="18" id="DKN-cF-dzJ"/>

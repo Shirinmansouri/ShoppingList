@@ -14,7 +14,7 @@ class RoundButton: UIButton {
         didSet{
             if roundButton
             {
-                layer.cornerRadius=frame.height/4
+                layer.cornerRadius=frame.height/2
             }
         }
     }

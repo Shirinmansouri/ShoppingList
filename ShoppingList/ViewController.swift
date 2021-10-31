@@ -1,9 +1,13 @@
-//
-//  ViewController.swift
-//  ShoppingList
-//
-//  Created by Shirin Mansouri on 2021-10-28.
-//
+/*
+ File : ViewController
+ Author: Shirin Mansouri
+ StudentId: 301131068
+ 
+ Last Modification Date: 30/October/2021
+ 
+ Description : an application to create create and Edit shopping list. Include two button to save and cancel the operation .
+ */
+ 
 
 import UIKit
 
@@ -47,7 +51,7 @@ class ViewController: UIViewController {
 
          
     }
- 
+ // changing the lable content based on stepper value 
     @IBAction func Stepper1(_ sender: UIStepper) {
         lblFirstShopping.text = String(Int(sender.value))
     }
@@ -72,7 +76,7 @@ class ViewController: UIViewController {
         
         ClearForm()
     }
-    //No comment
+    // in order to save data in local storage
     @IBAction func SaveButton(_ sender: RoundButton) {
         let defaults=UserDefaults.standard
         defaults.set(txtFifth.text!, forKey: "FirstItem")
@@ -96,6 +100,7 @@ class ViewController: UIViewController {
         present(vc, animated: true)
         
     }
+    //clear all the content of form
     func ClearForm()
     {
         lblFifthShopping.text = "1"
